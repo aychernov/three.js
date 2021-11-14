@@ -1,5 +1,12 @@
 import './style.css'
 import * as THREE from 'three'
+//Cursor
+
+window.addEventListener('mousemove', (e) =>{
+    console.log(e.clientX)
+})
+
+
 
 /**
  * Base
@@ -46,6 +53,9 @@ const tick = () =>
 
     // Update objects
     mesh.rotation.y = elapsedTime;
+
+    //Update camera
+
 
     // Render
     renderer.render(scene, camera)
